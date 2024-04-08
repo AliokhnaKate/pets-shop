@@ -96,7 +96,7 @@ function makeTemplate(itemTemp) {
     shop.querySelector('h1').textContent = itemTemp.title;
     shop.querySelector('p').textContent = itemTemp.description;
     shop.querySelector('.tags').textContent = itemTemp.tags;
-    shop.querySelector('.price').textContent = itemTemp.price;
+    shop.querySelector('.price').textContent = itemTemp.price + 'Р';
     shop.querySelector('img').src = itemTemp.img;
 
     return shop;
