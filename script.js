@@ -100,7 +100,7 @@ function makeTemplate(itemTemp) {
         span.classList.add('tag');
         span.textContent = item;
         const result = shop.querySelector('.tags');
-        result.append(item + ' ');
+        result.append(span + ' ');
     })
     shop.querySelector('.price').textContent = itemTemp.price + 'Р';
     shop.querySelector('img').src = itemTemp.img;
