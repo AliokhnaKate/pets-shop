@@ -96,11 +96,11 @@ function makeTemplate(itemTemp) {
     shop.querySelector('h1').textContent = itemTemp.title;
     shop.querySelector('p').textContent = itemTemp.description;
     itemTemp.tags.forEach(function(item) {
-        const span = document.createElement('span');
-        span.classList.add('tag');
-        span.textContent = item;
+        const span1 = document.createElement('span');
+        span1.classList.add('tag');
+        span1.textContent = item;
         const result = shop.querySelector('.tags');
-        result.append(span + ' ');
+        result.append(span1 + ' ');
     })
     shop.querySelector('.price').textContent = itemTemp.price + 'Р';
     shop.querySelector('img').src = itemTemp.img;
