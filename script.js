@@ -96,11 +96,11 @@ function makeTemplate(itemTemp) {
     shop.querySelector('h1').textContent = itemTemp.title;
     shop.querySelector('p').textContent = itemTemp.description;
     itemTemp.tags.forEach(function(item) {
-        const span1 = document.createElement('span');
-        span1.classList.add('tag');
-        span1.textContent = item;
+        const span = document.createElement('span');
+        span.classList.add('tag');
+        span.textContent = item;
         const result = shop.querySelector('.tags');
-        result.append(span1 + ' ');
+        result.append(item + ' ');
     })
     shop.querySelector('.price').textContent = itemTemp.price + 'Р';
     shop.querySelector('img').src = itemTemp.img;
@@ -114,11 +114,11 @@ function render(array) {
     //4.для массива нужен перебор элементов, для объекта - перебор ключ+значение
     array.forEach(function(item) {
         const template = makeTemplate(item);
-        const map = new Map();
-        for (let tags of map.keys()) {
-            const newTags = item[tags].join();
-            console.log(typeof newTags)
-        }
+        //const map = new Map();
+        //for (let tags of map.keys()) {
+        //    const newTags = item[tags].join();
+        //    console.log(typeof newTags)
+        //}
         shopItems.append(template);
     })
 
