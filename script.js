@@ -108,6 +108,11 @@ function render(array) {
     //4.для массива нужен перебор элементов, для объекта - перебор ключ+значение
     array.forEach(function(item) {
         const template = makeTemplate(item);
+        const map = new Map();
+        for (let tags of map.keys()) {
+            const newTags = item[tags].join();
+            console.log(typeof newTags)
+        }
         shopItems.append(template);
     })
 
