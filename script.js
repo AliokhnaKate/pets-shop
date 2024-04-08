@@ -99,7 +99,7 @@ function makeTemplate(itemTemp) {
         const span = document.createElement('span');
         span.classList.add('tag');
         span.textContent = item;
-        const result = shop.querySelector('.tags');
+        const result = shop.querySelector('tags');
         result.append(item);
     })
     shop.querySelector('.price').textContent = itemTemp.price + 'Р';
