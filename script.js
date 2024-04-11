@@ -124,3 +124,30 @@ render(items); //1.вызов ф-и
 
 //массив - items, обращение к массиву item.title
 //обьект - title и тд
+
+//## Продвинутый уровень
+
+const searchButton = document.querySelector('#search-btn')
+const searchInput = document.querySelector('#search-input')
+const nothingFound = document.querySelector('#nothing-found')
+
+searchButton.addEventListener('click', function() {
+    const searchText = searchInput.value;
+    const searchTitle = document.createElement('div');
+    searchTitle.textContent = searchText;
+    const newSearchText = searchText.trim().toLowerCase();
+
+    const filteredItems = items.filter((elem) => elem.title.toLowerCase().includes(newSearchText));
+
+    //shopItems.prepend(filtereredItems) так не получится вставить элемент, тк он является массивом, нужно через функцию. Для массива нужен перебор элементов forEach, для объекта - перебор ключ+значение
+    function filter(value) {
+        if (value == 0) {
+            shopItems.innerHTML = '';
+            nothingFound.textContent = 'Ничего не найдено'
+        } else {
+            shopItems.innerHTML = '';
+            render(value);
+        }
+    }
+    filter(filteredItems)
+})
