@@ -133,9 +133,8 @@ const nothingFound = document.querySelector('#nothing-found')
 
 searchButton.addEventListener('click', function() {
     const searchText = searchInput.value;
-    // создаем div  и добавляем ему textContent,  только если это надо вставить на страницу
+    // создаем div  и добавляем ему textContent,  только если это надо вставить на страницу, в консоль мы просто можем вывести значение переменной,  див для этого не нужен
     //const searchTitle = document.createElement('div');
-
     //searchTitle.textContent = searchText;
     const newSearchText = searchText.trim().toLowerCase();
 
