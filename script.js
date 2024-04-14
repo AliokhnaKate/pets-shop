@@ -133,9 +133,11 @@ const nothingFound = document.querySelector('#nothing-found')
 
 searchButton.addEventListener('click', function() {
     const searchText = searchInput.value;
+
     const searchTitle = document.createElement('div');
-    searchTitle.textContent = searchText;
-    const newSearchText = searchText.trim().toLowerCase();
+    // создаем div  и добавляем ему textContent,  только если это надо вставить на страницу
+    //searchTitle.textContent = searchText;
+    //const newSearchText = searchText.trim().toLowerCase();
 
     const filteredItems = items.filter((elem) => elem.title.toLowerCase().includes(newSearchText));
 
