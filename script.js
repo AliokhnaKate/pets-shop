@@ -87,8 +87,6 @@ const items = [{
 const itemTemplate = document.querySelector('#item-template');
 const shopItems = document.querySelector('#shop-items')
 const container = document.querySelector('.container')
-const image = document.querySelector('img')
-const tags = document.querySelector('.tags')
 
 function makeTemplate(itemTemp) {
     const shop = itemTemplate.content.cloneNode(true);
